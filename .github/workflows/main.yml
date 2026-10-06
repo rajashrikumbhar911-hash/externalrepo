@@ -12,8 +12,9 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v7
-
+      - name: install require package
+        run: pip install -r requirements.txt
       - name: run test 
         run: pytest -- cov=calculator --cov-report=term
-        
+
 
